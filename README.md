@@ -23,10 +23,10 @@ _After the last command, you will get the ip address to access the page_
 Example: http://172.17.0.2:30891 - basePath
 
 ## Endpoints:
-{{basePath}}/ - basic page (returns "Hello, World" message)
-{{basePath}}/health - page used to health check (returns "health" message)
-{{basePath}}/ready - page used to ready check (returns "ready" message)
-{{basePath}}/fibo/{int:n} - page used to calculate _n_ th Fibonacci number
+* {{basePath}}/ - basic page (returns "Hello, World" message)
+* {{basePath}}/health - page used to health check (returns "health" message)
+* {{basePath}}/ready - page used to ready check (returns "ready" message)
+* {{basePath}}/fibo/{int:n} - page used to calculate _n_ th Fibonacci number
 
 How to break your PC (joke):
 
