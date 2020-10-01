@@ -1,6 +1,7 @@
 # Home task 2, Stepan Tytarenko
 ## IMPORTANT
-###*Make sure your kubernetes-version=v1.15.0, or at least you have it installed (if not, I cannot guarantee success), because I have this version, and not sure how it works on different ones###
+### *Make sure your kubernetes-version=v1.15.0, or at least you have it installed (if not, I cannot guarantee success), because I have this version, and not sure how it works on different ones ###
+### REQUIRED** kubernetes-version=v1.15.0
 
 Use minikube to run the load-emulator
 
