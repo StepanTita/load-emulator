@@ -1,0 +1,46 @@
+apiVersion: v1
+items:
+- apiVersion: autoscaling/v2beta2
+  kind: HorizontalPodAutoscaler
+  metadata:
+    creationTimestamp: "2020-09-29T20:20:40Z"
+    name: loademulator-deployment
+    namespace: default
+    resourceVersion: "5082"
+    selfLink: /apis/autoscaling/v2beta2/namespaces/default/horizontalpodautoscalers/loademulator-deployment
+    uid: a38164bd-c72c-4163-827f-0d0248c2e300
+  spec:
+    maxReplicas: 3
+    metrics:
+    - resource:
+        name: cpu
+        target:
+          averageUtilization: 50
+          type: Utilization
+      type: Resource
+    minReplicas: 1
+    scaleTargetRef:
+      apiVersion: extensions/v1beta1
+      kind: Deployment
+      name: loademulator-deployment
+  status:
+    conditions:
+    - lastTransitionTime: "2020-09-29T20:20:56Z"
+      message: the HPA controller was able to get the target's current scale
+      reason: SucceededGetScale
+      status: "True"
+      type: AbleToScale
+    - lastTransitionTime: "2020-09-29T20:20:56Z"
+      message: 'the HPA was unable to compute the replica count: unable to get metrics
+        for resource cpu: unable to fetch metrics from resource metrics API: the server
+        could not find the requested resource (get pods.metrics.k8s.io)'
+      reason: FailedGetResourceMetric
+      status: "False"
+      type: ScalingActive
+    currentMetrics: null
+    currentReplicas: 1
+    desiredReplicas: 0
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
